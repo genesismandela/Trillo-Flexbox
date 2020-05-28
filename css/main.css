@@ -53,6 +53,12 @@ body {
   justify-content: center;
 }
 
+@media only screen and (max-width: 550px) {
+  .search {
+    display: none;
+  }
+}
+
 .search__input {
   font-family: inherit;
   font-size: inherit;
@@ -149,12 +155,23 @@ body {
   margin-top: 3.5rem;
 }
 
-.side-nav__item {
-  position: relative;
+@media only screen and (max-width: 1024px) {
+  .side-nav {
+    display: flex;
+    margin-top: 0;
+  }
 }
 
-.side-nav__item:not(:last-child) {
+.side-nav__item {
+  position: relative;
   margin-bottom: .5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .side-nav__item {
+    flex: 1;
+    margin-bottom: 0;
+  }
 }
 
 .side-nav__item::before {
@@ -189,6 +206,20 @@ body {
   align-items: center;
 }
 
+@media only screen and (max-width: 1024px) {
+  .side-nav__link:link, .side-nav__link:visited {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .side-nav__link:link, .side-nav__link:visited {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem .5rem;
+  }
+}
+
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
@@ -196,11 +227,30 @@ body {
   fill: currentColor;
 }
 
+@media only screen and (max-width: 700px) {
+  .side-nav__icon {
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: .7rem;
+  }
+}
+
+.side-nav__features {
+  font-size: 1.2rem;
+}
+
 .copyright {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .copyright {
+    display: none;
+  }
 }
 
 .gallery {
@@ -224,6 +274,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1.5rem 3rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .overview__heading {
+    font-size: 1.5rem;
+    padding: 1.25rem 1.5rem;
+  }
 }
 
 .overview__stars {
@@ -259,14 +316,32 @@ body {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 700px) {
+  .overview__rating {
+    padding: 0 1.5rem;
+  }
+}
+
 .overview__rating-average {
   font-size: 1.8rem;
   font-weight: 300;
 }
 
+@media only screen and (max-width: 700px) {
+  .overview__rating-average {
+    font-size: 1.4rem;
+  }
+}
+
 .overview__rating-count {
   font-size: 1.5rem;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 700px) {
+  .overview__rating-count {
+    font-size: .5rem;
+  }
 }
 
 .btn-inline {
@@ -328,6 +403,18 @@ body {
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 650px) {
+  .list {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-size: 1.8rem;
+  }
+}
+
+.list:not(:last-of-type) {
+  margin-right: 2.5rem;
+}
+
 .list__item {
   flex: 0 0 50%;
   margin-bottom: .7rem;
@@ -357,6 +444,10 @@ body {
   margin-right: auto;
 }
 
+.recommend__friends {
+  display: flex;
+}
+
 .recommend__photo {
   box-sizing: content-box;
   height: 4rem;
@@ -376,6 +467,21 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1125px) {
+  .review {
+    flex: 0 0 45%;
+  }
+  .review:not(:last-of-type) {
+    margin-right: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .review:not(:last-of-type) {
+    margin-right: 0;
+  }
 }
 
 .review__text {
@@ -508,12 +614,25 @@ body {
   display: flex;
 }
 
+@media only screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 .hotel-view {
@@ -529,6 +648,18 @@ body {
   border-bottom: var(--line);
 }
 
+@media only screen and (max-width: 1125px) {
+  .detail {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .detail {
+    padding: 2.5rem;
+  }
+}
+
 .description {
   background-color: #fff;
   box-shadow: var(--shadow-light);
@@ -537,9 +668,31 @@ body {
   margin-right: 4.5rem;
 }
 
+@media only screen and (max-width: 1125px) {
+  .description {
+    margin: 0 0 2.5rem 0;
+  }
+}
+
 .user-reviews {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width: 1125px) {
+  .user-reviews {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .user-reviews {
+    flex-direction: column;
+    flex: 0 0 100%;
+  }
 }
