@@ -9,6 +9,10 @@
 
 This project has been created following an Udemy CSS and SASS course where the FLEXBOX property is covered from start to end.
 
+Udemy Course created by Jonas Schmedtmann.
+
+https://www.udemy.com/course/advanced-css-and-sass/
+
 --> Link to the Landing page;
 
  https://genesismandela.github.io/Trillo-Flexbox/
